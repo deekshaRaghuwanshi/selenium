@@ -51,14 +51,22 @@ public class YahooToGmail {
 		Thread.sleep(3000);
 		WebElement email = driver.findElement(By.xpath("(//table)[7]/tbody/tr/td[5]/div[2]/span/span"));
 		String yahooemail=email.getAttribute("email");
-		
-		
 		System.out.println(yahooemail);
 		
+		// do logout from gmail
+	
+		driver.findElement(By.xpath("//a[contains(@aria-label,'Google Account')]")).click();
+		driver.findElement(By.xpath("//a[text()='Sign out']")).click();
+		Thread.sleep(5000);
+		driver.close();		
+		
+		// focus to yahoo tab
+		
+		driver.switchTo().window(l.get(0));
+		driver.findElement(By.xpath("//img[@role='presentation']")).click();
+		driver.findElement(By.xpath("//span[text()='Sign out']")).click();
+		Thread.sleep(3000);
 		driver.close();
-		
-		
-		
 	
 	}
 
