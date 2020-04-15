@@ -1,12 +1,10 @@
 package practiceprograms;
 
-
-
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class ManageMethods {
+public class ManageMethods{
 
 	public static void main(String[] args) throws Exception {
 		
@@ -23,7 +21,7 @@ public class ManageMethods {
 		int x=driver.manage().window().getPosition().getX();
 		int y=driver.manage().window().getPosition().getY();
 		System.out.println(x+" "+y);
-		// set the dimesions 
+		// set the dimensions 
 		Dimension d = new Dimension(200,300);
 		driver.manage().window().setSize(d);
 		Thread.sleep(4000);
@@ -33,8 +31,7 @@ public class ManageMethods {
 		Thread.sleep(3000);
 		// make full screen of browser
 		driver.manage().window().fullscreen();
-		
-
+	
 	}
 
 }

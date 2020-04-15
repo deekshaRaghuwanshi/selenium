@@ -9,8 +9,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import io.netty.util.internal.ThreadExecutorMap;
-
 public class YahooToGmail {
 
 	public static void main(String[] args) throws Exception {
