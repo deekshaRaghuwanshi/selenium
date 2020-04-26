@@ -19,13 +19,13 @@ public class SignUpTest {
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.get("https://homeonline.com");
 		driver.findElement(By.xpath("//div[@class='oteher-navbar']/following-sibling::div/span/a")).click();
-		driver.findElement(By.xpath("//*[@data-src='https://www.homeonline.com/iframe/signup']")).click();
-		Thread.sleep(2000);
-		// click on registration screen
-		Actions act= new Actions(driver);
-		WebElement element;
-		driver.findElement(By.xpath("//*[@type='tel']")).sendKeys("8518085737");
-	    driver.findElement(By.xpath("//*[@type='button']")).click();
+		driver.findElement(By.xpath("//a[text()=' Sign Up ']")).click();
+		// Switch to Frame
+		driver.switchTo().f
+        driver.findElement(By.xpath("//*[@type='tel']")).sendKeys("8518085737");
+	    driver.findElement(By.xpath("//button[text()='Continue']")).click();
+	    driver.close();
+	   
 		
 		
 

@@ -1,7 +1,6 @@
 package utils;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
@@ -92,15 +91,14 @@ public class XUtils {
     	wb=new XSSFWorkbook(fi);
     	ws=wb.getSheet(xlsheet);
     	row=ws.getRow(rownum);
-    	boolean data;
     	
     	try{
     		cell=row.getCell(colnum);
-    		data=cell.getBooleanCellValue();
+    		boolean data = cell.getBooleanCellValue();
     		
     	}catch(Exception e){
     		
-    		data=false;
+    		
     	}
 		return false;
     	 }

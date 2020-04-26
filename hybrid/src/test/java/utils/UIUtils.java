@@ -23,7 +23,7 @@ public class UIUtils {
 	  element=driver.findElement(By.xpath(xpath));
 	  Select list=new Select(element);
 	  List<WebElement> samplelist=list.getOptions();
-	  int itemcunt=samplelist.size();
+	  samplelist.size();
 	  
      }
   }
