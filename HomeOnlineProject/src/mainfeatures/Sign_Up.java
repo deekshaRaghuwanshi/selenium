@@ -11,9 +11,6 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-
-
-
 public class Sign_Up {
 
 	public static void main(String[] args) throws InterruptedException {
@@ -39,7 +36,6 @@ public class Sign_Up {
 		driver.findElement(By.xpath("//a[text()=' Sign Up ']")).click();
 		// Switch to Frame
 		driver.switchTo().frame(driver.findElement(By.id("cal-signup")));
-		Thread.sleep(5000);
 		//Explicitly wait
 		WebDriverWait wait=new WebDriverWait(driver, 20);
 		//Enter Mobile number

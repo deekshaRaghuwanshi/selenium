@@ -8,10 +8,16 @@ Feature: HomeOnline
     Then I Should See Home page
     When I Hovering the mouse over the Action icon
     And I Click on Sign Up link
+    And I switch the frame
+    Then I set explicit wait on phon no element until it becomes click
     And I Enter the Valid Mobile Number
     Then Click on Continue Button
     When Enter the valid OTP No
-    And Click on Continue Button
+    When I set implicit timeout
+    And Click on Continue1 Button
+    And Back to the default frame
+    Then I set explicit wait on cross icon element until it becomes clickable
+    Then Click on Cancel icon
     When I close the Browser
     
     
@@ -21,12 +27,12 @@ Feature: HomeOnline
 	Given I Open Browser with URL "https://www.homeonline.com/"
 	Then I Should See Home Page
 	When I Hovering the mouse over the Action icon
-  And I Click on Sign Up link
+    And I Click on Sign Up link
 	And I Enter the Invalid Mobile No as "<num>"
-  And Click on Continue Button
+    And Click on Continue Button
 	Then I Should See Error Message
-  And I Enter the Invalid OTP No as "<otm>"
-  When I Close Browser
+   And I Enter the Invalid OTP No as "<otm>"
+   When I Close Browser
 
 
   Examples: 
