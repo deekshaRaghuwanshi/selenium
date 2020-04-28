@@ -44,8 +44,8 @@ public class HomeOnlineFunctions {
 		}
 	}
 
-	@When("^I Hovering the mouse over the Action icon$")
-	public void i_Hovering_the_mouse_over_the_Action_icon() throws Throwable {
+	@When("^I Click on Action icon$")
+	public void i_click_on_action_icon() throws Throwable {
 		driver.findElement(By.xpath("//div[@class='oteher-navbar']/following-sibling::div/span/a")).click();
 
 	}
@@ -85,13 +85,11 @@ public class HomeOnlineFunctions {
 	@When("^I set implicit timeout$")
 	 public void i_set_implicit_timeout() throws Throwable {
 	 timeouts=driver.manage().timeouts();
-	 timeouts.implicitlyWait(5, TimeUnit.SECONDS);
+	 timeouts.implicitlyWait(40, TimeUnit.SECONDS);
 	}
 	
-	 
-	
-	@And("^Click on Continue1 Button$")
-	public void click_on_Continue1_Button() throws Throwable {
+	 @And("^Click on Confirm Button$")
+	public void click_on_Confirm_Button() throws Throwable {
 		driver.findElement(By.xpath("(//button[text()='Continue'])[2]")).click();
 		Thread.sleep(5000);
 		}
@@ -115,6 +113,59 @@ public class HomeOnlineFunctions {
 		driver.close();
 
 	}
+	   
+	@When("^I Click on Login link$")
+	public void i_Click_on_Login_link() throws Throwable {
+		//Click on Login link
+		driver.findElement(By.xpath("//a[text()='Login']")).click();
+		// Switch to Frame
+	    
+	}
+
+	@When("^I Switch the Frame$")
+	public void i_Switch_the_Frame() throws Throwable {
+		driver.switchTo().frame(0);
+		Thread.sleep(5000);
+	}
+
+	@When("^I Enter the Email Address as \"([^\"]*)\"$")
+	public void i_Enter_the_Email_Address_as(String arg1) throws Throwable {
+		driver.findElement(By.id("userPhone")).sendKeys("corwin.dell@gmail.com");
+	}
+
+	@When("^Click on Continue(\\d+) Button$")
+	public void click_on_Continue_Button(int arg1) throws Throwable {
+		driver.findElement(By.xpath("(//button[text()='Continue'])[5]")).click();
+	}
+
+	@When("^I Enter the Password as \"([^\"]*)\"$")
+	public void i_Enter_the_Password_as(String arg1) throws Throwable {
+		driver.findElement(By.id("userPassword")).sendKeys("dbcl@2019");
+	}
+
+	@When("^Click On Sign_in Button$")
+	public void click_On_Sign_in_Button() throws Throwable {
+	driver.findElement(By.xpath("(//button[text()='Sign In'])[1]")).click();
+	}
+	@And("^Back to the default frame1$")
+	public void Back_to_the_default_frame1() throws Throwable {
+		driver.switchTo().defaultContent();
+	}
+	@Then("^I set explicit wait on cancel icon element until it becomes clickable$")
+	public void i_set_explicit_wait_on_cancel_icon_element_until_it_becomes_clickable(){
+		wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//button[@id='close-popup-btn']"))));
+	}
+	@Then("^Click on Cancel Icon$")
+	public void click_on_Cancel_Icon() throws Throwable {
+		wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//button[@id='close-popup-btn']"))));
+		driver.findElement(By.xpath("//button[@id='close-popup-btn']")).click();
+	}
+
+	@When("^I Close Browser$")
+	public void i_Close_Browser() throws Throwable {
+	    driver.close();
+	}
+
 
 }
 

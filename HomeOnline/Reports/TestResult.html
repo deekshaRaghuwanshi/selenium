@@ -47,7 +47,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Apr 26, 2020 11:55:19 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Apr 28, 2020 10:12:51 PM</span>
 				</a>
 			</li>
 			<li>
@@ -87,6 +87,7 @@
 				<ul id='category-toggle' class='dropdown-content'>
 					<li><a href='#'>@tag</a></li>
 					<li><a href='#'>@tag1</a></li>
+					<li><a href='#'>@tag2</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -149,7 +150,7 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> scenario(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>2</span> scenario(s) passed</span>
 				</div>
 				<div class='block text-small'>
 					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
@@ -164,7 +165,7 @@
 					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>15</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>28</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
 					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
@@ -184,7 +185,7 @@
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>HomeOnline</span>
-						<span class='test-time'>Apr 26, 2020 11:55:19 PM</span>
+						<span class='test-time'>Apr 28, 2020 10:12:51 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
@@ -192,10 +193,10 @@
 	<div class='category-list'>
 		<span class='category label white-text'>@tag1</span>
 	</div>
-	<span class='duration right label'>0h 0m 31s+47ms</span>
+	<span class='duration right label'>0h 0m 28s+251ms</span>
 	<div class='desc'>
 		<b>Scenario</b>
-		<span class="desc-text">Check Admin sign up with valid data</span>
+		<span class="desc-text">Sign_Up Functionality</span>
 	</div>
 	<ul class='steps'>
 		<li test-id='3' class='node given pass' status='pass'>
@@ -218,7 +219,7 @@
 			
 			<b>When</b>
 			
-			<span class="bdd-step-name">When I Hovering the mouse over the Action icon</span>
+			<span class="bdd-step-name">When I Click on Action icon</span>
 				<div class='pre'>passed</div>
 			
 		</li>
@@ -282,7 +283,7 @@
 			
 			<b>And</b>
 			
-			<span class="bdd-step-name">And Click on Continue1 Button</span>
+			<span class="bdd-step-name">And Click on Confirm Button</span>
 				<div class='pre'>passed</div>
 			
 		</li>
@@ -317,6 +318,80 @@
 			<span class="bdd-step-name">When I close the Browser</span>
 				<div class='pre'>passed</div>
 			
+		</li>
+	</ul>
+</div>
+<div class='scenariooutline node' test-id='18' status='pass'>
+	<span class='duration right label'>0h 0m 24s+261ms</span>
+	<div class='desc'>
+		<b>ScenarioOutline</b>
+		<span class="desc-text">Check Login Functionality with Valid or Invalid data</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='19' class='node scenario pass' status='pass'>
+			<div class='category-list'>
+				<span class='category label white-text'>@tag</span>
+				<span class='category label white-text'>@tag2</span>
+			</div>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Check Login Functionality with Valid or Invalid data</span>
+			
+				<ul class='steps'>
+					<li test-id='20' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given I Open Browser with URL "https://www.homeonline.com/"</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='21' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When I Click on Action icon</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='22' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I Click on Login link</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='23' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And I Switch the Frame</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='24' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When I Enter the Email Address as "corwin.dell@gmail.com"</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='25' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Click on Continue2 Button</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='26' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When I Enter the Password as "dbcl@2019"</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='27' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Click On Sign_in Button</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='28' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And Back to the default frame1</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='29' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then I set explicit wait on cancel icon element until it becomes clickable</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='30' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then I set explicit wait on cross icon element until it becomes clickable</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='31' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then Click on Cancel Icon</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='32' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When I Close Browser</span>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
 		</li>
 	</ul>
 </div>
@@ -376,12 +451,12 @@
 					<div class='category-heading'>
 						<span class='category-name'>@tag</span>
 						<span class='category-status right'>
-							<span class='label pass'>1</span>
+							<span class='label pass'>2</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span class='label green accent-4 white-text'>Passed: 1</span>
+							<span class='label green accent-4 white-text'>Passed: 2</span>
 							
 							
 						</div>
@@ -397,8 +472,13 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Apr 26, 2020 11:55:19 PM</td>
+										<td>Apr 28, 2020 10:12:51 PM</td>
 										<td class='linked' test-id='1'>HomeOnline</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 28, 2020 10:13:19 PM</td>
+										<td class='linked' test-id='19'>HomeOnline.Check Login Functionality with Valid or Invalid data.Check Login Functionality with Valid or Invalid data</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
@@ -431,8 +511,42 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Apr 26, 2020 11:55:19 PM</td>
-										<td class='linked' test-id='2'>HomeOnline.Check Admin sign up with valid data</td>
+										<td>Apr 28, 2020 10:12:51 PM</td>
+										<td class='linked' test-id='2'>HomeOnline.Sign_Up Functionality</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@tag2</span>
+						<span class='category-status right'>
+							<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 28, 2020 10:13:19 PM</td>
+										<td class='linked' test-id='19'>HomeOnline.Check Login Functionality with Valid or Invalid data.Check Login Functionality with Valid or Invalid data</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
@@ -467,31 +581,31 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>1</div>
+					<div class='panel-lead'>2</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>15</div>
+					<div class='panel-lead'>28</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Apr 26, 2020 11:55:19 PM</div>
+					<div class='panel-lead'>Apr 28, 2020 10:12:51 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Apr 26, 2020 11:55:50 PM</div>
+			 		<div class='panel-lead'>Apr 28, 2020 10:13:44 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 31s+221ms</div>
+					<div class='panel-lead'>0h 0m 52s+665ms</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -508,7 +622,7 @@
 						</tr>
 						<tr>
 							<td>@tag</td>
-							<td>1</td>
+							<td>2</td>
 							<td>0</td>
 							<td>0</td>
 							<td>
@@ -517,6 +631,15 @@
 						</tr>
 						<tr>
 							<td>@tag1</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@tag2</td>
 							<td>1</td>
 							<td>0</td>
 							<td>0</td>
@@ -545,7 +668,7 @@
 				skipParent: 0,
 				exceptionsParent: 0,
 				
-				passChild: 1,
+				passChild: 2,
 				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
@@ -554,7 +677,7 @@
 				infoChild: 0,
 				exceptionsChild: 0,
 				
-				passGrandChild: 15,
+				passGrandChild: 28,
 				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
